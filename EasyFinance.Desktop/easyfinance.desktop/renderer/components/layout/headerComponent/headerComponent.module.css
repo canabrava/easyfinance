@@ -1,0 +1,30 @@
+.image-background {
+    background-color: var(--color-tertiary);
+    padding: 0px;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border-radius: 100px;
+    display: inline-block;
+}
+
+@media (max-height: 1000px) {
+    .image-background {
+        display: none;
+    }
+}
+
+.greeting-text {
+    font-size: clamp(1rem, 6vmin, 2rem);
+    font-family: sans-serif;
+    color: var(--color-tertiary);
+    place-items: center;
+}
+
+@media (max-height: 600px) {
+    .greeting-text  {
+        display: none;
+    }
+}
+

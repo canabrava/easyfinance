@@ -1,0 +1,22 @@
+.logoAnimationContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+.logoAnimation {
+  max-width: 100vw;
+  height: auto;
+}
+
+
+@media (max-width: 1000px) {
+  .logoAnimation {
+    max-width: 50vw; 
+  }
+}
+
+

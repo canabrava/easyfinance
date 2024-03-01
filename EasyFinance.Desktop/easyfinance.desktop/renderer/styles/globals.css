@@ -1,0 +1,169 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #092C3F;
+  --color-secondary: #00C6B1;
+  --color-tertiary: #F1F1E6;
+  --color-dark-tertiary: #B5B5A5;
+}
+
+@layer components { 
+  .btn-primary-color {
+    @apply font-bold text-white duration-150 ease-in-out bg-primary;
+
+    transition-property: "background-color";
+  }
+
+  .btn-primary-color:hover {
+    @apply bg-secondary;
+  }
+
+  .btn-primary {
+    @apply px-4 py-2 rounded btn-primary-color focus:outline-none focus:shadow-outline;
+  }
+
+  .btn-cancel {
+    @apply px-4 py-2 font-bold text-white duration-150 ease-in-out bg-red-500 rounded focus:outline-none focus:shadow-outline;
+  
+    transition-property: "background-color";
+  }
+
+  .btn-cancel:hover {
+    @apply bg-red-700;
+  }
+
+  .tab-primary {
+    @apply px-4 py-2 font-bold bg-primary text-tertiary;
+  }
+
+  .tab-selected{
+    @apply px-4 py-2 font-bold bg-tertiary text-primary;
+
+  }
+  
+  .tab-primary:hover {
+    @apply bg-secondary;
+  }
+
+  .link-primary {
+    @apply px-4 py-2 rounded text-primary focus:outline-none focus:shadow-outline;
+    transition: color 0.3s;
+  }
+
+  .link-primary:hover {
+    @apply text-secondary;
+  }
+
+  .text-title{
+    @apply text-2xl font-bold text-gray-700 
+  }
+
+  .form-input{
+    @apply text-gray-700 text-sm font-light shadow appearance-none border rounded w-full py-2 px-3 mb-3 leading-tight focus:outline-none focus:shadow-outline
+  }
+
+  .form-text{
+    @apply text-primary text-sm font-bold block mb-2
+  }
+}
+
+.background-image-class {
+  background-image: url('/images/white-bg.png'); /* Caminho para sua imagem */
+  background-repeat: no-repeat; /* Para não repetir a imagem */
+  background-size: cover; /* Para cobrir toda a área do elemento */
+  background-position: center; /* Para centralizar a imagem no elemento */
+}
+
+body {
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      var(--color-secondary)
+    )
+    var(--color-primary);
+}
+
+html, body {
+  height: 100vh;
+  max-height: 100vh;
+
+  max-width: 100vw;
+
+  overflow-x: auto;
+  overflow-y: auto;
+  margin: 0;
+}
+
+*,
+*:after {
+  box-sizing: border-box;
+}
+
+@media (max-height: 950px){
+  footer{
+    display: none;
+  }
+  
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 10vh 85vh 5vh;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+
+  width: 100%; 
+  height: 100vh;
+}
+
+@media (max-height: 950px) {
+  .parent {
+    grid-template-rows: 10vh 90vh 0vh;
+  }
+}
+
+@media (max-height: 600px) {
+  .parent {
+    grid-template-rows: 0vh 100vh 0vh;
+  }
+}
+
+.parent > * {
+  max-width: 100%;
+  height: auto;
+}
+
+
+.bt-rounded {
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+}
+
+.scroll-container {
+  position: relative;
+  overflow: auto;
+
+  height: 100%;
+}
+
+.scroll-container::-webkit-scrollbar {
+  width: 12px;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+  background: var(--color-tertiary);
+  border-radius: 20px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background-color: var(--color-primary);
+  border-radius: 20px;
+  border: 3px solid var(--color-tertiary);
+}
+
+.scroll-container::-webkit-scrollbar-thumb:hover {
+  background: var(--color-secondary);
+}

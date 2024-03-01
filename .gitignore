@@ -1,0 +1,26 @@
+# .NET
+bin/
+obj/
+*.user
+*.suo
+*.userprefs
+*.sln.docstates
+*.cache
+*.csproj.user
+*.csproj.vspscc
+*.bak
+*.cache
+*.dll
+*.exe
+*.pdb
+*.DS_Store
+*.sln.ide/
+
+# Nextron
+/node_modules
+/dist
+/.cache
+/yarn-error.log
+/yarn-debug.log
+/npm-debug.log
+/package-lock.json
